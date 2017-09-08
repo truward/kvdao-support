@@ -1,0 +1,59 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.truward.kvdao</groupId>
+    <artifactId>kvdao-support</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>kvdao-xodus</artifactId>
+
+  <name>Key-Value DAO Support for Xodus DB</name>
+
+  <dependencies>
+    <!-- Logging -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+    </dependency>
+
+    <!-- KV DAO model -->
+    <dependency>
+      <groupId>com.truward.kvdao</groupId>
+      <artifactId>kvdao-model</artifactId>
+    </dependency>
+
+    <!-- Protocol Buffers -->
+    <dependency>
+      <groupId>com.google.protobuf</groupId>
+      <artifactId>protobuf-java</artifactId>
+    </dependency>
+
+    <!-- Semantic ID -->
+    <dependency>
+      <groupId>com.truward.semantic</groupId>
+      <artifactId>semantic-id</artifactId>
+      <version>3.0.3</version>
+    </dependency>
+
+    <!-- Xodus -->
+    <dependency>
+      <groupId>org.jetbrains.xodus</groupId>
+      <artifactId>xodus-openAPI</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.jetbrains.xodus</groupId>
+      <artifactId>xodus-environment</artifactId>
+      <version>${xodus.version}</version>
+    </dependency>
+
+    <!-- Logger for tests -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-simple</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>
+
