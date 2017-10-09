@@ -9,6 +9,7 @@ import org.springframework.dao.EmptyResultDataAccessException;
 
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.Objects;
 
 /**
  * Protocol buffer entity de/serializer.
@@ -19,7 +20,6 @@ import javax.annotation.ParametersAreNonnullByDefault;
 public final class ProtoEntity {
   private ProtoEntity() {} // hidden
 
-  @SuppressWarnings("unchecked")
   public static <T extends Message> T entryToProto(@Nullable ByteIterable byteIterable, T defaultInstance) {
     if (byteIterable == null) {
       throw new EmptyResultDataAccessException(defaultInstance.getClass().getName(), 1);
@@ -31,7 +31,9 @@ public final class ProtoEntity {
     }
 
     try {
-      return (T) defaultInstance.getParserForType().parseFrom(bytes, 0, byteIterable.getLength());
+      @SuppressWarnings("unchecked")
+      final T result = (T) defaultInstance.getParserForType().parseFrom(bytes, 0, byteIterable.getLength());
+      return Objects.requireNonNull(result);
     } catch (InvalidProtocolBufferException e) {
       throw new DataIntegrityViolationException("Can't parse entity " + defaultInstance.getClass(), e);
     }
