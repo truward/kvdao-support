@@ -4,7 +4,7 @@
 
   <groupId>com.truward.kvdao</groupId>
   <artifactId>kvdao-support</artifactId>
-  <version>0.0.2-SNAPSHOT</version>
+  <version>0.0.2</version>
 
   <packaging>pom</packaging>
   <description>
@@ -17,7 +17,7 @@
     <connection>scm:git:https://github.com:truward/kvdao-support.git</connection>
     <developerConnection>scm:git:https://github.com/truward/kvdao-support.git</developerConnection>
     <url>https://github.com/truward/kvdao-support.git</url>
-    <tag>HEAD</tag>
+    <tag>kvdao-support-0.0.2</tag>
   </scm>
 
   <licenses>
