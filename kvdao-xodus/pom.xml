@@ -4,7 +4,7 @@
   <parent>
     <groupId>com.truward.kvdao</groupId>
     <artifactId>kvdao-support</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.3-SNAPSHOT</version>
   </parent>
 
   <artifactId>kvdao-xodus</artifactId>
